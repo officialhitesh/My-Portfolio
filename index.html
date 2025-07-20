@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-HiteshKr</title>
+    <meta name="description"
+        content="Welcome to the portfolio of Hitesh Kumar, a passionate developer skilled in Java, Python, and Machine Learning." />
+    <meta name="author" content="Hitesh Kumar" />
+    <meta name="keywords"
+        content="Hitesh Kumar, Portfolio, Web Developer, Java, Python, Machine Learning, Student, B.Tech IT" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">My Portfolio </div>
+        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1 id="typing">Welcome to My Portfolio 👋</h1>
+            <p>
+                Hi, I'm Hitesh Kumar 😊, a passionate B.Tech student 🎓 and aspiring Machine Learning Engineer 🤖.
+                Explore my work 💻 and connect with me! 🔗
+            </p>
+        </section>
+        <section id="about">
+            <h2>About me 🤘 </h2>
+            <p>I am an Information Technology undergraduate at Amity University, Gwalior, with a strong interest in
+                Artificial
+                Intelligence, Machine Learning, and DevOps. I specialize in Python, Java, and foundational ML/DL
+                techniques, and
+                I love building smart, useful tech projects and exploring new tools and frameworks.</p>
+            <p>I have a solid foundation in machine learning algorithms, Flask for web development, and version control
+                using
+                Git/GitHub. I'm currently learning MLOps and Cloud Computing to become job-ready by the end of my final
+                year.
+                I’m always eager to take on challenging, real-world problems and expand my skill set.</p>
+        </section>
+        <section id="projects">
+            <h2>Projects📝</h2>
+            <div class="project-grid">
+                <div class="project-item">
+                    <h3>Project 1: Customer Churn Prediction</h3>
+                    <p>Developed an Artificial Neural Network (ANN) model to predict customer churn based on user data.
+                        Used
+                        Python, pandas, and TensorFlow, and built a Flask web UI for interaction.</p>
+                    <a href="#" target="_blank">View Project</a>
+                </div>
+                <div class="project-item">
+                    <h3>Project 2: Black & White Image Colorization</h3>
+                    <p>Built a deep learning model to automatically colorize grayscale images using convolutional neural
+                        networks. Trained using image datasets with TensorFlow/Keras.</p>
+                    <a href="#" target="_blank">View Project</a>
+                </div>
+                <div class="project-item">
+                    <h3>Project 3: Attendance Calculator Chrome Extension</h3>
+                    <p>Created a Chrome extension that extracts attendance data from the Amizone portal and calculates
+                        how many
+                        classes can be skipped or need to be attended to meet the 75% requirement.</p>
+                    <a href="#" target="_blank">View Project</a>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <h2>Skills 🤹</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>C++</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>Javascript</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>React.js</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Backend Development</h3>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Flask</li>
+                        <li>Django</li>
+                        <li>REST APIs</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <ul>
+                        <li>SQL (MySQL, PostgreSQL)</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Others</h3>
+                    <ul>
+                        <li>Git/Github</li>
+                        <li>Docker</li>
+                        <li>Aws</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="resume">
+            <h2>Resume 📄</h2>
+            <p>Here's my resume if you'd like to know more about me!</p>
+            <a href="{{ url_for('static', filename='Resume-Hiteshkr.pdf') }}" class="btn" download>Download Resume</a>
+        </section>
+        <section id="contact">
+            <h2>Contact 📲</h2>
+            <p>Feel free to reach out to me via email or connect on social media.</p>
+            <div class="contact-details">
+                <p>Email: <a href="mailto:hiteshbksc@gmail.com">hiteshbksc@gmail.com</a></p>
+                <p>GitHub: <a href="https://github.com/" target="_blank">github.com/yourusername</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/hitesh-kumar2003/" target="_blank">linkedin.com/in/hitesh-kumar2003</a></p>
+            </div>
+            <h3>Send me a message!</h3>
+            <form action="/submit_feedback" method="POST" class="feedback-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+        </section>
+    </main>
+    <footer class="footer">
+        <p>© 2025 Hitesh Kumar. All rights reserved.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
